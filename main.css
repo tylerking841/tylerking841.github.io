@@ -1,6 +1,12 @@
 body{
     background-color: rgb(192, 198, 200);
     margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     position: relative;
+}
+
+#email-icon{
+    height: auto;
+    width: 5.75%;
 }
