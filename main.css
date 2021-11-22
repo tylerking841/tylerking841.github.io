@@ -1,5 +1,6 @@
 body{
-    background-color: rgb(43, 47, 65);
+    background-color: rgb(33, 33, 54);
+    color: rgb(129, 146, 212);
     margin: auto;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     font-size: 12px;
@@ -8,10 +9,37 @@ body{
 }
 
 #navbar{
-    background-color: rgb(93, 100, 131);
+    z-index: 999;
+    overflow: hidden;
+    background-color: rgb(43, 45, 53);
     visibility: hidden;
     margin-left: auto;
     margin-right: auto;
+}
+
+#navbar a{
+    float: right;
+    display: block;
+    color: rgb(168, 173, 194);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#navbar-name{
+    float: left;
+    display: block;
+    color: rgb(168, 173, 194);
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+
+#a{
+    font-size: 100px;
 }
 
 #email-icon{
