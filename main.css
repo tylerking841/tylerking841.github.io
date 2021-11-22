@@ -1,5 +1,6 @@
 body{
+    background-color: rgb(192, 198, 200);
     margin: auto;
-    background-color: darkcyan;
     text-align: center;
+    position: relative;
 }
