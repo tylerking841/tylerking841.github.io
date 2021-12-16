@@ -1,11 +1,12 @@
 body{
-    background-color: rgb(33, 33, 54);
-    color: rgb(129, 146, 212);
+    background-color: rgb(43, 43, 44);
+    color: rgb(197, 198, 201);
     margin: auto;
     font-family: 'Segoe UI', Tahoma, sans-serif;
     font-size: 12px;
     text-align: center;
     position: relative;
+    max-height: 3000px;
 }
 
 #navbar{
@@ -37,6 +38,22 @@ body{
     font-size: 25px;
 }
 
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    visibility: visible;
+}
+
+@keyframes fadein {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes fadeout {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}
 
 #a{
     font-size: 100px;

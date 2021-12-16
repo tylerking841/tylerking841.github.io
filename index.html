@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,46 +6,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="main.css">
     
-    <link rel="icon" type="image/png" href="/road face.png">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/png" href="road.png">
 </head>
 
 <body>
-    <script>
-        window.onscroll = function() {navFunction()};
-        let navbar = document.getElementById("navbar");
-        let sticky = navbar.offsetTop;
-        function navFunction(){
-            if(window.pageYOffset >= sticky){
-                navbar.classList.add("sticky");
-                document.getElementById("navbar").style.visibility = "visible";
-                document.getElementById("navbar").style.opacity = "1";
-                document.getElementById("navbar").style.animation = "fadein 0.5s linear";
-            }else if(document.body.scrollTop === 0){
 
-                document.getElementById("navbar").style.opacity = "0";
-                document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
-            }else{
-                navbar.classList.remove("sticky");
-                document.getElementById("navbar").style.opacity = "0";
-                document.getElementById("navbar").style.animation = "fadeout 1s linear";
-            }
-        }
-    </script>
-    <div id="navbar" style="opacity: 1; animation: 0.5s linear 0s 1 normal none running fadein; visibility: visible;" class="sticky">
+    <div  id="navbar" style="opacity: 1; animation: 0.5s linear 0s 1 normal none running fadein; visibility: visible;" class="sticky">
         <a href="test" class="navbar-options">Tyler</a>
         <a href="test" class="navbar-options">King</a>
         <span id="navbar-name">Lorem Test</span>
     </div>
+    <!--nav bar -->
+    <script>
+        window.onscroll = function() {navFunction()};
+        let navbar = document.getElementById("navbar");
+        let sticky = navbar.offsetTop;
+        //alert(document.body.scrollHeight/4);
+        //alert(sticky);
+        //alert(document.getElementById("navbar"));
+        function navFunction(){
+            
+            if(window.pageYOffset > sticky){ //if pageYOffset is greater than sticky fadeout navbar
+                //alert(document.body.scrollTop);
+                //alert(window.pageYOffset);
+                navbar.classList.add("sticky");
+                document.getElementById("navbar").style.visibility = "visible";
+                document.getElementById("navbar").style.opacity = "0";
+                document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
+
+            }else if(document.body.scrollTop === 0){ //if at the top of the page fade in navbar
+                //alert("else if");
+                document.getElementById("navbar").style.opacity = "1";
+                document.getElementById("navbar").style.animation = "fadein 0.5s linear";
+            }else{ // if neither if statements work fade in navbar
+                //alert("else");
+                navbar.classList.remove("sticky");
+                document.getElementById("navbar").style.opacity = "1";
+                document.getElementById("navbar").style.animation = "fadein 1s linear";
+            }
+        }
     
-    <p id="a">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+    </script>
+    
+    <p id="a">"Hi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
     <div class="footer" >
+        <audio id="song" src="Aphex_twin-Xtal.mp3" type="audio/mpeg" loop="loop"></audio>
         <a><img src="email.png" alt="email png" id="email-icon" onclick="copyEmail()" ></a>
     </div>
+    <!--play music on load script-->
+    <script>
+        window.scroll = function(){
+            document.getElementById("song").play();
+        }
+    </script>
 
+
+    <!--copy email script-->
     <script>
         function copyEmail() {
             var email = document.createElement('textarea');
