@@ -14,9 +14,9 @@
 <body>
 
     <div  id="navbar" style="opacity: 1; animation: 0.5s linear 0s 1 normal none running fadein; visibility: visible;" class="sticky">
-        <a href="test" class="navbar-options">Tyler</a>
-        <a href="test" class="navbar-options">King</a>
-        <span id="navbar-name">Lorem Test</span>
+        <!--<a href="test" class="navbar-options">Test</a>-->
+        <!--<a href="test" class="navbar-options">Test</a>-->
+        <span id="navbar-name">Tyler King</span>
     </div>
     <!--nav bar -->
     <script>
@@ -50,19 +50,25 @@
     
     </script>
     
-    <p id="a">"Hi Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.""Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-
-    <div class="footer" >
-        <audio id="song" src="Aphex_twin-Xtal.mp3" type="audio/mpeg" loop="loop"></audio>
-        <a><img src="email.png" alt="email png" id="email-icon" onclick="copyEmail()" ></a>
+    <p id="a">Welcome to my website</p>
+    <div class="text">
+        Welcome, im Tyler King and this is my online portfolio. Im a computer science student currently studying at Algonquin College in Ottawa, Canada. My email, github, and linkedin are available at the bottom of the page. Feel free to contact me for any reason, even if its just to say hi.
     </div>
+    <div class="footer" >
+        <!--<button onclick="playSong()">Press me</button>-->
+        <!--<audio id="song" controls autoplay loop preload="auto"><source src="Aphex_twin-Xtal.mp3" type="audio/mpeg"></audio>-->
+        <a><img src="email.png" alt="email png" id="email-icon" onclick="copyEmail()" ></a>
+        <a href="https://github.com/darkreplive"> <img id="github" src="github.png"> </a>
+        <a href="https://www.linkedin.com/in/tyler-king-845114199/"> <img id="linkedin" src="linkedin.png"> </a>
+    </div>
+    
     <!--play music on load script-->
     <script>
-        window.scroll = function(){
+        function playSong(){
+            alert("play");
             document.getElementById("song").play();
         }
     </script>
-
 
     <!--copy email script-->
     <script>
@@ -77,6 +83,5 @@
             alert("Copied email to clipboard");
         }
     </script>
-
 </body>
 </html>
