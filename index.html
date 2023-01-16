@@ -1,87 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Tyler King</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" type="image/png" href="road.png">
-</head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
+    <link rel="stylesheet" href="images/main.css" />
+    <link rel="icon" type="image/png" href="images\road.png" />
+  </head>
+  <!--Main Page-->
+  <body>
+    <header
+      id="navbar"
+      style="
+        opacity: 1;
+        animation: 0.5s linear 0s 1 normal none running fadein;
+        visibility: visible;
+      "
+      class="sticky"
+    >
+      <a href="#" id="navbar-name">Tyler King</a>
+      <a href="projects.html" id="navbar-a">Projects</a>
+    </header>
 
-    <div  id="navbar" style="opacity: 1; animation: 0.5s linear 0s 1 normal none running fadein; visibility: visible;" class="sticky">
-        <!--<a href="test" class="navbar-options">Test</a>-->
-        <!--<a href="test" class="navbar-options">Test</a>-->
-        <span id="navbar-name">Tyler King</span>
-    </div>
-    <!--nav bar -->
-    <script>
-        window.onscroll = function() {navFunction()};
-        let navbar = document.getElementById("navbar");
-        let sticky = navbar.offsetTop;
-        //alert(document.body.scrollHeight/4);
-        //alert(sticky);
-        //alert(document.getElementById("navbar"));
-        function navFunction(){
-            
-            if(window.pageYOffset > sticky){ //if pageYOffset is greater than sticky fadeout navbar
-                //alert(document.body.scrollTop);
-                //alert(window.pageYOffset);
-                navbar.classList.add("sticky");
-                document.getElementById("navbar").style.visibility = "visible";
-                document.getElementById("navbar").style.opacity = "0";
-                document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
-
-            }else if(document.body.scrollTop === 0){ //if at the top of the page fade in navbar
-                //alert("else if");
-                document.getElementById("navbar").style.opacity = "1";
-                document.getElementById("navbar").style.animation = "fadein 0.5s linear";
-            }else{ // if neither if statements work fade in navbar
-                //alert("else");
-                navbar.classList.remove("sticky");
-                document.getElementById("navbar").style.opacity = "1";
-                document.getElementById("navbar").style.animation = "fadein 1s linear";
-            }
-        }
-    
-    </script>
-    
     <p id="a">Welcome to my website</p>
     <p class="text">
-        Welcome, im Tyler King and this is my online portfolio. Im a computer science student currently studying at Algonquin College in Ottawa, Canada. My email, github, and linkedin are available at the bottom of the page. Feel free to contact me for any reason, even if its just to network.
+      Welcome, im Tyler King and this is my online portfolio. Im a computer
+      science student currently studying at Algonquin College in Ottawa, Canada.
+      My email, github, and linkedin are available at the bottom of the page.
+      Feel free to contact me for any reason, even if its just to network.
     </p>
-    <div class="footer" >
-        <!--<button onclick="playSong()">Press me</button>-->
-        <!--<audio id="song" controls autoplay loop preload="auto"><source src="Aphex_twin-Xtal.mp3" type="audio/mpeg"></audio>-->
-        <a><img src="email.png" alt="email png" id="email-icon" onclick="copyEmail()" ></a>
-        <a href="https://github.com/darkreplive"> <img id="github" src="github.png"> </a>
-        <a href="https://www.linkedin.com/in/tyler-king-845114199/"> <img id="linkedin" src="linkedin.png"> </a>
-    </div>
-    
-    <!--play music on load script-->
-    <script>
-        function playSong(){
-            alert("play");
-            document.getElementById("song").play();
-        }
-    </script>
+    <h1>My Projects</h1>
+    <ul></ul>
+    <footer class="footer">
+      <a
+        ><img
+          src="images\email.png"
+          alt="email png"
+          id="email-icon"
+          onclick="copyEmail2()"
+      /></a>
+      <a href="https://github.com/tylerking841">
+        <img id="github" src="images\github.png" />
+      </a>
+      <a href="https://www.linkedin.com/in/tyler-king-845114199/">
+        <img id="linkedin" src="images\linkedin.png" />
+      </a>
+    </footer>
 
-    <!--copy email script-->
-    <script>
-        function copyEmail() {
-            var email = document.createElement('textarea');
-            email.value = "tylerking841@gmail.com";
-            document.body.appendChild(email);
-            email.select();
-            email.setSelectionRange(0, 99999);
-            document.execCommand('copy');
-            document.body.removeChild(email);
-            alert("Copied email to clipboard");
-        }
-    </script>
-</body>
+    <!--play music on load script-->
+    <!--<audio controls autoplay volume="0.2">-->
+    <!--
+    <audio controls volume="0.2">
+      <source src="Aphex_twin-Xtal.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  --></body>
 </html>
+<!--nav bar script-->
+<script>
+  window.onscroll = function () {
+    navFunction();
+  };
+  let navbar = document.getElementById("navbar");
+  let sticky = navbar.offsetTop;
+  //alert(document.body.scrollHeight/4);
+  //alert(sticky);
+  //alert(document.getElementById("navbar"));
+  function navFunction() {
+    if (window.pageYOffset > sticky) {
+      //if pageYOffset is greater than sticky fadeout navbar
+      //alert(document.body.scrollTop);
+      //alert(window.pageYOffset);
+      navbar.classList.add("sticky");
+      document.getElementById("navbar").style.visibility = "visible";
+      document.getElementById("navbar").style.opacity = "0";
+      document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
+    } else if (document.body.scrollTop === 0) {
+      //if at the top of the page fade in navbar
+      //alert("else if");
+      document.getElementById("navbar").style.opacity = "1";
+      document.getElementById("navbar").style.animation = "fadein 0.5s linear";
+    } else {
+      // if neither if statements work fade in navbar
+      //alert("else");
+      navbar.classList.remove("sticky");
+      document.getElementById("navbar").style.opacity = "1";
+      document.getElementById("navbar").style.animation = "fadein 1s linear";
+    }
+  }
+</script>
+
+<!--copy email script-->
+<script>
+  function copyEmail() {
+    var email = document.createElement("textarea");
+    email.value = "tylerking841@gmail.com";
+    document.body.appendChild(email);
+    email.select();
+    email.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    document.body.removeChild(email);
+    alert("Copied email to clipboard");
+  }
+  function copyEmail2() {
+    var email = "tylerking841@gmail.com";
+    navigator.clipboard.writeText(email).then(
+      function () {
+        alert("Email address copied to clipboard");
+      },
+      function (err) {
+        console.error("Failed to copy email: ", err);
+      }
+    );
+  }
+</script>
