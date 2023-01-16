@@ -3,7 +3,7 @@ body {
   background-size: cover;
   background-color: rgb(43, 43, 44);
   color: rgb(197, 198, 201);
-  margin: auto;
+  margin-top: 100px;
   font-family: "Segoe UI", Tahoma, sans-serif;
   font-size: 12px;
   text-align: center;
@@ -13,7 +13,7 @@ body {
 }
 
 .header {
-  background-image: url("stock-photo-1037455359.jpg");
+  background-image: url("");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
@@ -47,11 +47,11 @@ body {
   overflow: hidden;
   background-color: rgb(43, 45, 53);
   visibility: hidden;
-  margin-left: auto;
-  margin-right: auto;
+  left: 0px;
+  right: 0px;
 }
 
-#navbar-a {
+.navbar-a {
   float: right;
   display: block;
   color: rgb(168, 173, 194);
