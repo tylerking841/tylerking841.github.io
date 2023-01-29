@@ -12,6 +12,12 @@ body {
   max-height: 3000px;
 }
 
+section {
+  font-size: 20px;
+  padding: 10px;
+  background-color: rgb(43, 43, 44);
+}
+
 .header {
   background-image: url("");
   background-position: bottom;
@@ -43,6 +49,9 @@ body {
 }
 
 #navbar {
+  opacity: 1;
+  animation: 0.5s linear 0s 1 normal none running fadein;
+  visibility: visible;
   z-index: 999;
   overflow: hidden;
   background-color: rgb(43, 45, 53);
