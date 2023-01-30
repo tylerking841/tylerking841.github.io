@@ -13,9 +13,19 @@ body {
 }
 
 section {
-  font-size: 20px;
+  font-size: 40px;
+  font-family: "Segoe UI", Tahoma, sans-serif;
   padding: 10px;
   background-color: rgb(43, 43, 44);
+}
+
+.hyperlink {
+  color: rgb(113, 142, 230);
+  text-decoration: none;
+}
+
+.hyperlink:hover {
+  color: rgb(89, 103, 148);
 }
 
 .header {
