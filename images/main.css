@@ -60,7 +60,7 @@ section {
 
 #navbar {
   opacity: 1;
-  animation: 0.5s linear 0s 1 normal none running fadein;
+  /*animation: 0.5s linear 0s 1 normal none running fadein;*/
   visibility: visible;
   z-index: 999;
   overflow: hidden;
