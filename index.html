@@ -83,28 +83,19 @@
     navFunction();
   };
   let navbar = document.getElementById("navbar");
-  let sticky = navbar.offsetTop;
-  //alert(document.body.scrollHeight/4);
-  //alert(sticky);
-  //alert(document.getElementById("navbar"));
+  let position = navbar.offsetTop;
   function navFunction() {
-    if (window.pageYOffset > sticky) {
-      //if pageYOffset is greater than sticky fadeout navbar
-      //alert(document.body.scrollTop);
-      //alert(window.pageYOffset);
-      navbar.classList.add("sticky");
+    if (window.pageYOffset > position) {
+      //if pageYOffset is greater than position fadeout navbar
       document.getElementById("navbar").style.visibility = "visible";
       document.getElementById("navbar").style.opacity = "0";
       document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
     } else if (document.body.scrollTop === 0) {
       //if at the top of the page fade in navbar
-      //alert("else if");
       document.getElementById("navbar").style.opacity = "1";
       document.getElementById("navbar").style.animation = "fadein 0.5s linear";
     } else {
       // if neither if statements work fade in navbar
-      //alert("else");
-      navbar.classList.remove("sticky");
       document.getElementById("navbar").style.opacity = "1";
       document.getElementById("navbar").style.animation = "fadein 1s linear";
     }
