@@ -8,6 +8,20 @@
 
     <link rel="stylesheet" href="images/main.css" />
     <link rel="icon" type="image/png" href="images\road.png" />
+    <!-- Google tag (gtag.js) -->
+<script
+async
+src="https://www.googletagmanager.com/gtag/js?id=G-DEGNYRHPH3"
+></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "G-DEGNYRHPH3");
+</script>
   </head>
   <!--Main Page-->
   <body>
@@ -66,7 +80,7 @@
           src="images\email.png"
           alt="email png"
           id="email-icon"
-          onclick="copyEmail2()"
+          onclick="copyEmail()"
       /></a>
       <a href="https://github.com/tylerking841">
         <img id="github" alt="github" src="images\github.png" />
@@ -105,16 +119,6 @@
 <!--copy email script-->
 <script>
   function copyEmail() {
-    var email = document.createElement("textarea");
-    email.value = "tylerking841@gmail.com";
-    document.body.appendChild(email);
-    email.select();
-    email.setSelectionRange(0, 99999);
-    document.execCommand("copy");
-    document.body.removeChild(email);
-    alert("Copied email to clipboard");
-  }
-  function copyEmail2() {
     var email = "tylerking841@gmail.com";
     navigator.clipboard.writeText(email).then(
       function () {
@@ -125,19 +129,4 @@
       }
     );
   }
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-DEGNYRHPH3"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-DEGNYRHPH3");
 </script>
