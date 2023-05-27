@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Magic 8 Ball</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="images/main.css" />
+    <link rel="icon" type="image/png" href="images\road.png" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DEGNYRHPH3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "G-DEGNYRHPH3");
+    </script>
+    <style>
+        .container {
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .question-input {
+            margin-bottom: 20px;
+        }
+
+        .answer {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: 0.5;
+            opacity: 0;
+            animation: fadein;
+        }
+
+        button {
+            background-color: #3c3b61;
+            color: rgb(197, 198, 201);
+            border: none;
+            text-align: center;
+            font-size: 16px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <header id="navbar" class="sticky">
+            <a href="index.html" id="navbar-name">Tyler King</a>
+            <a href="Files\resume.pdf" target="_blank" class="navbar-a">Resume</a>
+            <a href="magic.html" class="navbar-a">8 Ball</a>
+        </header>
+    </div>
+    <div class="container">
+        <h1 id="a">Magic 8 Ball</h1>
+            <input type="text" id="question-input" class="question-input" placeholder="Ask a question">
+            <button onclick="getAnswer()">Get Answer</button>
+        <div id="answer" class="answer">Lorem Ipsum.</div>
+        <img id="ball" src="Files/magic-8-ball.gif" alt="Animated GIF">
+    </div>
+
+    <footer class="footer">
+        <a><img src="images\email.png" alt="email png" id="email-icon" onclick="copyEmail()" /></a>
+        <a href="https://github.com/tylerking841">
+            <img id="github" alt="github" src="images\github.png" />
+        </a>
+        <a href="https://www.linkedin.com/in/tylerkiingg">
+            <img id="linkedin" alt="linkedin" src="images\linkedin.png" />
+        </a>
+    </footer>
+</body>
+
+<script>
+    function getAnswer() {
+        var question = document.getElementById("question-input").value;
+        var answers = [
+            "It is certain.",
+            "It is decidedly so.",
+            "Without a doubt.",
+            "Yes - definitely.",
+            "You may rely on it.",
+            "As I see it, yes.",
+            "Most likely.",
+            "Outlook good.",
+            "Yes.",
+            "Signs point to yes.",
+            "Reply hazy, try again.",
+            "Ask again later.",
+            "Better not tell you now.",
+            "Cannot predict now.",
+            "Concentrate and ask again.",
+            "Don't count on it.",
+            "My reply is no.",
+            "My sources say no.",
+            "Outlook not so good.",
+            "Very doubtful."
+        ];
+        var randomIndex = Math.floor(Math.random() * answers.length);
+        document.getElementById("answer").innerText = answers[randomIndex];
+        document.getElementById("answer").style.opacity = "1";
+    }
+</script>
+
+</html>
