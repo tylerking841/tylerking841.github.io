@@ -109,3 +109,43 @@
 </script>
 
 </html>
+
+<!--nav bar script-->
+<script>
+    window.onscroll = function () {
+      navFunction();
+    };
+    let navbar = document.getElementById("navbar");
+    let position = navbar.offsetTop;
+    function navFunction() {
+      if (window.pageYOffset > position) {
+        //if pageYOffset is greater than position fadeout navbar
+        document.getElementById("navbar").style.visibility = "visible";
+        document.getElementById("navbar").style.opacity = "0";
+        document.getElementById("navbar").style.animation = "fadeout 0.5s linear";
+      } else if (document.body.scrollTop === 0) {
+        //if at the top of the page fade in navbar
+        document.getElementById("navbar").style.opacity = "1";
+        document.getElementById("navbar").style.animation = "fadein 0.5s linear";
+      } else {
+        // if neither if statements work fade in navbar
+        document.getElementById("navbar").style.opacity = "1";
+        document.getElementById("navbar").style.animation = "fadein 1s linear";
+      }
+    }
+  </script>
+  
+  <!--copy email script-->
+  <script>
+    function copyEmail() {
+      var email = "tylerking841@gmail.com";
+      navigator.clipboard.writeText(email).then(
+        function () {
+          alert("Email address copied to clipboard");
+        },
+        function (err) {
+          console.error("Failed to copy email: ", err);
+        }
+      );
+    }
+  </script>
